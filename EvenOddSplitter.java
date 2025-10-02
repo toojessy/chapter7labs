@@ -4,6 +4,7 @@ Date: 10-2-25
 Description:  Prints the even numbers on one line and the odd numbers on another.
 */
 
+** THIS DOESN'T WORK BTW, JS ERROR SHELL CODE **
 import java.util.Scanner;
 
 class EvenOdd {
@@ -17,7 +18,7 @@ class EvenOdd {
             splitter[i] = input.nextInt();
         }
         
-        System.out.print(i);
+        System.out.print(splitter);
   //  public static int getEvens(int[] nums) {
   //       if (nums % 2 == 0) {
   //          System.out.println("Even numbers: " + nums); 
