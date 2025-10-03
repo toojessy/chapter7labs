@@ -18,7 +18,7 @@ public class PlaylistShuffle {
             "What Does the Fox Say? - Ylvis"
         };
 
-        shuffle(playlist); // Shuffle the playlist in-place
+        shuffle(playlist); 
 
         System.out.println("Shuffled Playlist:\n");
         for (String song : playlist) {
@@ -30,9 +30,8 @@ public class PlaylistShuffle {
         Random rand = new Random();
 
         for (int i = playlist.length - 1; i > 0; i--) {
-            int j = rand.nextInt(i + 1); // Get a random index from 0 to i
+            int j = rand.nextInt(i + 1); 
 
-            // Swap playlist[i] with playlist[j]
             String temp = playlist[i];
             playlist[i] = playlist[j];
             playlist[j] = temp;
