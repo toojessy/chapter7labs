@@ -7,7 +7,7 @@ Description:  Prints the even numbers on one line and the odd numbers on another
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class EvenOdd {
+public class EvenOddSplitter {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter 15 integers separated by one space each: ");
@@ -19,6 +19,7 @@ public class EvenOdd {
         }
         System.out.println("Even numbers: " + Arrays.toString(getEvens(splitter))); //prints the array as a string
         System.out.println("Odd numbers: " + Arrays.toString(getOdds(splitter)));
+        input.close();
     }
     
     public static int []getEvens(int[] nums) {
