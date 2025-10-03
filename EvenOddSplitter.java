@@ -30,3 +30,38 @@ class EvenOdd {
    // }
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter 15 integers separated by one space each: ");
+        int nums = input.nextInt();
+        
+        int[] splitter = new int[nums];
+       // int size = 15;
+       // splitter = new int[]; 
+        
+        for (int i = 0; i < splitter.length; i++) {
+            splitter[i] = input.nextInt();
+        }
+        
+        for (int num : splitter) {
+            System.out.println(num);
+        }
+        input.close();
+        
+        //System.out.print(i);
+    }
+}
