@@ -4,64 +4,49 @@ Date: 10-2-25
 Description:  Prints the even numbers on one line and the odd numbers on another.
 */
 
-** THIS DOESN'T WORK BTW, JS ERROR SHELL CODE **
 import java.util.Scanner;
-
-class EvenOdd {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter 15 integers separated by one space each: ");
-        int nums = input.nextInt();
-        
-        int[] splitter = new int[nums];
-        for (int i = 0; i < splitter.length; i++) {
-            splitter[i] = input.nextInt();
-        }
-        
-        System.out.print(splitter);
-  //  public static int getEvens(int[] nums) {
-  //       if (nums % 2 == 0) {
-  //          System.out.println("Even numbers: " + nums); 
-  //      }
-  //  }
-  //  public static int getOdds(int[] nums) {
-  //      if (nums % 2 != 0) {
-  //          System.out.println("Even numbers: " + nums); 
-   // }
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class EvenOdd {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter 15 integers separated by one space each: ");
-        int nums = input.nextInt();
         
-        int[] splitter = new int[nums];
-       // int size = 15;
-       // splitter = new int[]; 
-        
-        for (int i = 0; i < splitter.length; i++) {
-            splitter[i] = input.nextInt();
+         int[] splitter = new int[15];
+        for (int i = 0; i < 15; i++) {
+            int nums = input.nextInt();
+            splitter[i] = nums;
         }
-        
-        for (int num : splitter) {
-            System.out.println(num);
-        }
-        input.close();
-        
-        //System.out.print(i);
+        System.out.println("Even numbers: " + Arrays.toString(getEvens(splitter))); //prints the array as a string
+        System.out.println("Odd numbers: " + Arrays.toString(getOdds(splitter)));
     }
-}
+    
+    public static int []getEvens(int[] nums) {
+        int[] evennums = new int[7];
+        int count = 0;
+        int even = nums.length;
+        for (int i = 0; i < even; i++) {
+            if (nums[i] % 2 == 0) {
+            evennums [count] = nums[i];
+            count++;
+            }
+         
+         }
+         return evennums;
+    }
+    
+    public static int []getOdds(int[] nums) {
+        int[] oddnums = new int[8];
+        int count = 0;
+        int odd = nums.length;
+        for (int i = 0; i < odd; i++) {
+            if (nums[i] % 2 != 0) {
+            oddnums [count] = nums[i];
+            count++;
+            }
+         
+         }
+         return oddnums;
+    }
+}    
+    
