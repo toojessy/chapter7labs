@@ -10,44 +10,54 @@ import java.util.Arrays;
 public class EvenOddSplitter {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter 15 integers separated by one space each: ");
-        
-         int[] splitter = new int[15];
+        System.out.println("Enter 15 integers separated by spaces: ");
+
+        int[] splitter = new int[15];
         for (int i = 0; i < 15; i++) {
-            int nums = input.nextInt();
-            splitter[i] = nums;
+            splitter[i] = input.nextInt();
         }
-        System.out.println("Even numbers: " + Arrays.toString(getEvens(splitter))); //prints the array as a string
+
+        System.out.println("Even numbers: " + Arrays.toString(getEvens(splitter)));
         System.out.println("Odd numbers: " + Arrays.toString(getOdds(splitter)));
+
         input.close();
     }
-    
-    public static int []getEvens(int[] nums) {
-        int[] evennums = new int[7];
+
+    public static int[] getEvens(int[] nums) {
+        int[] tempEvens = new int[nums.length]; 
         int count = 0;
-        int even = nums.length;
-        for (int i = 0; i < even; i++) {
+
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
-            evennums [count] = nums[i];
-            count++;
+                tempEvens[count] = nums[i];
+                count++;
             }
-         
-         }
-         return evennums;
+        }
+
+        int[] evens = new int[count];
+        for (int i = 0; i < count; i++) {
+            evens[i] = tempEvens[i];
+        }
+
+        return evens;
     }
-    
-    public static int []getOdds(int[] nums) {
-        int[] oddnums = new int[8];
+
+    public static int[] getOdds(int[] nums) {
+        int[] tempOdds = new int[nums.length]; 
         int count = 0;
-        int odd = nums.length;
-        for (int i = 0; i < odd; i++) {
+
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 != 0) {
-            oddnums [count] = nums[i];
-            count++;
+                tempOdds[count] = nums[i];
+                count++;
             }
-         
-         }
-         return oddnums;
+        }
+
+        int[] odds = new int[count];
+        for (int i = 0; i < count; i++) {
+            odds[i] = tempOdds[i];
+        }
+
+        return odds;
     }
-}    
-    
+}
