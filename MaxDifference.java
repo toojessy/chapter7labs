@@ -15,7 +15,7 @@ public class Maths {
     }
     public class MaxDifference {
         int nums = new int[nums.length];
-        for (int i = 0; i > nums; i++) {
+        for (int i = 0; i < nums; i++) {
             if (nums[i] > max) {
                 int max = nums[i];
             }
@@ -26,8 +26,9 @@ public class Maths {
             }
         }
         int diff = max - min;
+        System.out.println("Largest number: " + max);
+        System.out.println("Smallest number: " + min);
+        System.out.println("Difference: " + diff);
     }
-    System.out.println("Largest number: " + max);
-    System.out.println("Smallest number: " + min);
-    System.out.println("Difference: " + diff);
+
 }
